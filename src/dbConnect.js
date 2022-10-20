@@ -1,0 +1,6 @@
+import { MongoClient } from 'mongodb';
+import { uri } from "../secrets.js";
+export function dbConnec (){
+    const client = new MongoClient(uri);
+    return client.db("mydatabase");
+}
